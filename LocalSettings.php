@@ -170,12 +170,6 @@ define( 'NS_WPIMPORT', 1744);
 define( 'NS_WPIMPORT_TALK', 1745);
 define( 'NS_ARCHIVE', 1746);
 define( 'NS_ARCHIVE_TALK', 1747);
-define( 'NS_WPREDIRECT', 1748);
-define( 'NS_WPREDIRECT_TALK', 1749);
-define( 'NS_WALKTHROUGH', 1750);
-define( 'NS_WALKTHROUGH_TALK', 1751);
-define( 'NS_STAFF', 1752);
-define( 'NS_STAFF_TALK', 1753);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -999,9 +993,6 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
-		'+yokaiwatchwiki' => array(
-			'anon' => true,
-		),
 		'+zhdelwiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -1743,7 +1734,6 @@ $wgConf->settings = array(
 		'podpediawiki' => true,
 		'puzzlewiki' => true,
 		'test1wiki' => true,
-		'thegreatwarwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
@@ -3432,18 +3422,15 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false,
 		'ayrshirewiki' => false,
-		'thegreatwarwiki' => false,
 		'thelonsdalebattalionwiki' => false,
 	),
 	'wgMetrolookUploadButton' => array(
 		'default' => true,
 		'allthetropeswiki' => false,
-		'thegreatwarwiki' => false,
 	),
 	'wgMetrolookBartile' => array(
 		'default' => true,
 		'ayrshirewiki' => false,
-		'thegreatwarwiki' => false,
 		'thelonsdalebattalionwiki' => false,
 	),
 	'wgMetrolookMobile' => array(
@@ -3458,13 +3445,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'ayrshirewiki' => false,
 	),
-	'wgMetrolookFeatures' => array(
-		'default' => array( 
-			'collapsiblenav' => array( 'global' => false, 'user' => true ) ),
-		'thegreatwarwiki' => array(
-			'collapsiblenav' => array( 'global' => true, 'user' => true ) ),
-	),
-	
+
 	// MirahezeMagic
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions and https://meta.miraheze.org/wiki/Dormancy_Policy/Exemptions
 	'wgFindInactiveWikisWhitelist' => array(
@@ -3788,15 +3769,11 @@ $wgConf->settings = array(
 		),
 		'oecumenewiki' => array(
 			NS_ARCHIVE => 'Архив',
-			NS_ARCHIVE_TALK => 'Обсуждение_архива',
-			NS_PORTAL => 'Портал',
-			NS_PORTAL_TALK => 'Обсуждение_портала',
+			NS_ARCHIVE_TALK => 'Архив_обсуждение',
 		),
 		'picardwiki' => array(
 			NS_WPIMPORT => 'WPImport',
-			NS_WPIMPORT_TALK => 'WPImport_Diskussion',
-			NS_WPREDIRECT => 'WPRedirect',
-			NS_WPREDIRECT_TALK => 'WPRedirect_Diskussion',
+			NS_WPIMPORT_TALK => 'WPImport_talk',
 		),
 		'ratanpirwiki' => array(
 			NS_PORTAL => 'Portal',
@@ -3928,16 +3905,6 @@ $wgConf->settings = array(
 			NS_GALLERY => 'Gallery',
 			NS_GALLERY_TALK => 'Gallery_talk',
 		),
-		'yokaiwatchwiki' => array(
-			NS_WALKTHROUGH => 'Walkthrough',
-			NS_WALKTHROUGH_TALK => 'Walkthrough_talk',
-			NS_GALLERY => 'Gallery',
-			NS_GALLERY_TALK => 'Gallery_talk',
-			NS_POLICY => 'Policy',
-			NS_POLICY_TALK => 'Policy_talk',
-			NS_STAFF => 'Staff',
-			NS_STAFF_TALK => 'Staff_talk',
-		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
@@ -4007,10 +3974,6 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
-		),
-		'+picardwiki' => array(
-			'NS_USER_PROFILE' => 'Benutzerprofil',
-			'NS_USER_PROFILE_TALK' => 'Benutzerprofil Diskussion',
 		),
 		'+proxybotwiki' => array(
 			'UT' => NS_USER_TALK,
@@ -5871,7 +5834,6 @@ $wgConf->settings = array(
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/2/27/Jawp2ch_apple-touch-icon.png",
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/6/64/Favicon.ico",
-		'revitwiki' => "//$wmgUploadHostname/https://static.miraheze.org/revitwiki/4/43/Apple-touch-icon.png",
 	),
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',
@@ -5899,7 +5861,7 @@ $wgConf->settings = array(
 		'podpediawiki' => 'metrolook',
 		'puzzlewiki' => 'metrolook',
 		'raymanspeedrunwiki' => 'bootstrapmediawiki',
-		'revitwiki' => 'vector',
+		'revitwiki' => 'monobook',
 		'thebbwiki' => 'apex',
 		'thelonsdalebattalionwiki' => 'metrolook',
 	),
@@ -6025,7 +5987,6 @@ $wgConf->settings = array(
 		'podpediawiki' => "//$wmgUploadHostname/podpediawiki/0/0e/PodpediaFavicon2.png",
 		'puzzlewiki' => "//$wmgUploadHostname/puzzlewiki/0/0d/PuzzlepediaFavicon.png",
 		'raymanspeedrunwiki' => "//$wmgUploadHostname/raymanspeedrunwiki/0/08/Rayman_Speedrun_Wiki_Favicon.png",
-		'revitwiki' => "//$wmgUploadHostname/revitwiki/6/64/Favicon.ico",
 		'rpgbrigadewiki' => "//$wmgUploadHostname/rpgbrigadewiki/6/64/Favicon.ico",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
 		'saliorpediawiki' => "//$wmgUploadHostname/saliorpediawiki/a/ac/Favicon-1.png",
@@ -6418,7 +6379,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
 		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
-		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/9/91/Zendari_Logo_4by4.png",
+		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/2/2c/Zendari_Logo.png",
 	),
 
 	// TemplateSandbox
@@ -6450,6 +6411,7 @@ $wgConf->settings = array(
 		'nenawikiwiki' => 'America/New_York',
 		'ontariobrasswiki' => 'America/Toronto',
 		'proxybotwiki' => 'America/Chicago',
+		'revitwiki' => 'Pacific Ocean/Honolulu',
 		'reviwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
 		'thelonsdalebattalionwiki' => 'Europe/London',
